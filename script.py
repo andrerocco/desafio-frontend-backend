@@ -1,7 +1,7 @@
 import time
 from math import sqrt
 
-number = 100000
+number = 6
 
 inicio = time.time() # Armazena o instante de inicialização do loop para a solução do problema
 inicioCPU = time.process_time()
