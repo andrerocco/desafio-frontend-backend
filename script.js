@@ -33,12 +33,13 @@ let form = document.getElementById("form");
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Previne que a página recarregue quando o usuário submeter sua resposta
 
-    let number = document.getElementById("number").value; // Recebe o número digitado pelo usuário
+    let number = document.getElementById("number-input").value; // Recebe o número digitado pelo usuário
     
     let inicio = performance.now(); // Armazena o instante de inicialização do loop para a solução do problema
-    
-    calcularResultado(number);
-
+    let resultado = calcularResultado(number);
     let fim = performance.now(); // Armazena o instante final em que o loop terminou de ser executado
+    
     let tempoDecorrido = fim - inicio // Calcula o tempo para a solução
+
+    console.log(resultado)
 })
