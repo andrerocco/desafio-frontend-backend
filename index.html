@@ -9,19 +9,29 @@
 </head>
 
 <body>
-    <form class="unselectable">
+    <form class="unselectable" id="form">
         <label for="number-input">Insira um número</label><br>
         <input type="number" id="number-input" name="number" min="1" autocomplete="off" required><br>
         <input type="submit" value="Calcular">
     </form>
 
     <div id="resultado-container">
-        <div id="estatisticas-grid">
-            <p>Número</p> <p>100</p>
-            <p>Resultado</p> <p>24</p>
-            <p>Tempo de execução</p> <p>0,01 s</p>
-        </div>
-        <p>Existem 24 números menores que 100 que possuem o mesmo número de divisores que seu consecutivo. O algorítmo levou 0,01 segundo(s) para calcular esse resultado</p>
+        <!-- <p id="texto-detalhes">Existem 24 números menores que 100 que possuem o mesmo número de divisores que seu respectivo inteiro consecutivo. O algorítmo processou esse resultado em 0,01 segundo(s).</p>
+         -->
+        <table id="estatisticas">
+            <tr>
+                <td>Número</td>
+                <td id="table-number">---</td>
+            </tr>
+            <tr>
+                <td>Resultado</td>
+                <td id="table-result">---</td>
+            </tr>
+            <tr>
+                <td>Tempo de execução</td>
+                <td id="table-time">---</td>
+            </tr>
+        </table>
         
     </div>
 

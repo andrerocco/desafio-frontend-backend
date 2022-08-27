@@ -66,19 +66,33 @@ input[type=number] { -moz-appearance: textfield; }
 /* Display do resultado */
 #resultado-container {
     position: absolute;
-    width: 30vw;
-    bottom: 18%;
+    width: 40vw;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
 }
-#estatisticas-grid {
-    display: grid; 
-    grid-template-columns: max-content 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 20px; 
-    grid-template-areas: 
-      ". ."
-      ". ."
-      ". ."; 
-      margin-bottom: 30px;
+
+#resultado-container table {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-collapse: collapse;
+    width: 300px;
+}
+
+th, td {
+    color: rgb(48, 48, 48);
+    padding: 12px;
+}
+  
+tr:nth-child(odd) { background-color: #f7f7f7; }
+td:nth-child(1) { text-align: left; }
+td:nth-child(2) { text-align: right; }
+
+
+#texto-detalhes {
+    margin-bottom: 40px;
+    color: rgb(48, 48, 48);
+    text-align: center;
 }
