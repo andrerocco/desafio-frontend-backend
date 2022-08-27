@@ -29,18 +29,21 @@ function calcularResultado(number) {
     return resultado // Retorna o resultado da operação
 }
 function mostrarResultados(numero, resultado, tempoDecorrido) {
-    let elementoNumero = document.getElementById("table-number");
-    let elementoResultado = document.getElementById("table-result");
-    let elementoTempo = document.getElementById("table-time");
     
-    console.log("🚀 ~ file: script.js ~ line 32 ~ mostrarResultados ~ resultado", resultado)
-    console.log("🚀 ~ file: script.js ~ line 32 ~ mostrarResultados ~ tempoDecorrido", tempoDecorrido)
+    console.log("🚀 Resultado = ", resultado)
+    console.log("🚀 Tempo decorrido = ", tempoDecorrido)
+    
+    let numeroFormatado = numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    let resultadoFormatado = resultado.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    let tempoFormatado = (tempoDecorrido/1000).toFixed(4).toString().replace('.', ',');
 
-    tempoSegundos = tempoDecorrido/1000
+    // Envia as strings com os valores formatados para o site
+    document.getElementById("table-number").innerHTML = numeroFormatado;
+    document.getElementById("table-result").innerHTML = resultadoFormatado;
+    document.getElementById("table-time").innerHTML = tempoFormatado + ' s';
 
-    elementoNumero.innerHTML = numero.toString();
-    elementoResultado.innerHTML = resultado.toString();
-    elementoTempo.innerHTML = tempoSegundos.toFixed(4).toString().replace('.', ',') + ' s';
+    let texto = document.getElementById("texto-detalhes");
+    texto.innerHTML = `Existem <span>${resultadoFormatado}</span> número(s) menor(es) que <span>${numeroFormatado}</span> que possue(m) o mesmo número de divisores que seu respectivo inteiro consecutivo. O algorítmo processou esse resultado em <span>${tempoFormatado} segundo(s)</span>.`;
 }
 
 
