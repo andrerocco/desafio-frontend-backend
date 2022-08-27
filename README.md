@@ -16,7 +16,7 @@ Os números 2 e 3 têm respectivamente 2 divisores positivos (1 e 2; 1 e 3), por
 O problema pode ser resolvido através de um algorítmo relativmente simples:
 - O programa irá percorrer todos os números positivos e diferentes de zero menores que o número inserido pelo usuário.
 - Para cada número percorrido, o programa irá descobrir seu número de divisores.
-- Para descobrir o número de divisores do número em questão, o programa irá percorrer todos os números positivos menores que o número que está sendo conferido e testar se os números são divisores ou não, armazenando o número de divisores em uma variável.
+- Para descobrir o número de divisores do número em questão, o programa irá percorrer todos os inteiros positivos menores que o número que está sendo conferido e testar se os números são divisores ou não, armazenando o número de divisores em uma variável.
 
 *JavaScript:*
 ```js
@@ -63,3 +63,100 @@ print(resultado)
 ```
 
 Entretando, é possível notar que esse algorítmo, apesar de simples, se torna cada vez mais custoso conforme o número inserido pelo usuário aumenta.
+
+### A solução otimizada
+
+É possível otimizar o algorítmo que contabiliza (descobre através da força bruta) a quantidade de números divisíveis do número *i* e, dessa forma, reduzir significantemente o tempo de execução. 
+Veja como o algorítmo irá descobrir quantos divisores um *i* número tem:
+- Ao invés de percorrer todos os inteiros de 1 até *i*, o programa irá percorrer todos os inteiros de 1 até √*i*
+- Se um inteiro de 1 até √*i* divide *i*, então o programa irá conferir se *i* dividido por esse inteiro é diferente de *i*. Caso se confirme, então *i* dividido pelo inteiro em questão também divide *i*.
+Essa solução considera que os divisores de um número qualquer podem ser distribuídos em pares. Por exemplo, os divisores de 16 são 1, 2, 4, 8, 16. Os pares seram formados por números juntos aos seus divisores complementares seriam (1, 16), (2, 8) e (4, 4). Os pares que não tem números repetidos serão contados na mesma instância do for. Já o único par que contém o número repetido é a mediana da lista de divisores de um número quando o número aos quais divisores estão sendo conferidos é um quadrado perfeito.
+Note que essa explicação não é uma prova matemátima, mas sim uma exemplificação.
+
+*JavaScript:*
+```js
+let resultado = 0; // Ao final do loop, irá armazenar o resultado
+let divisoresAnterior = 0; // Armazena temporáriamente a quantidade de divisores do último número do loop
+
+// A variável number é o número inserido pelo usuário
+for (let i = 1; i < number; i++) {
+    let divisoresAtual = 0;
+
+    // Atualização do algorítmo
+    let limit = parseInt(Math.sqrt(i));
+    for (let k = 1; k < limit+1; k++) {
+        if (i % k == 0) { 
+            divisoresAtual++;
+            if (k != i/k) {
+                divisoresAtual++;
+            }
+        }
+    };
+
+    if (divisoresAtual == divisoresAnterior) {
+        resultado++;
+    };
+
+    divisoresAnterior = divisoresAtual
+};
+```
+
+*Python:*
+```py
+resultado = 0  # Ao final do loop, irá armazenar o resultado
+divisoresAnterior = 0 # Armazena temporáriamente a quantidade de divisores do último número do loop
+
+# A variável number é o número inserido pelo usuário
+for i in range(1, number):
+    divisoresAtual = 0
+
+    limit = int(sqrt(i))
+    for k in range(1, limit+1):
+        if (i % k == 0): 
+            divisoresAtual += 1
+            if (k != i/k):
+                divisoresAtual += 1
+
+    if (divisoresAtual == divisoresAnterior):
+        resultado += 1
+
+    divisoresAnterior = divisoresAtual
+
+print(resultado)
+```
+
+Fazendo testes rapidos, é possível notar uma drástica diferença no tempo de exercução dos dois algorítmos.
+
+*JavaScript - Tempo de exercução*
+Número calculado: 5000
+Algorítmo sem otimização - 0,87 segundos
+Algorítmo otimizado - 0,02 segundos
+
+Número calculado: 10000
+Algorítmo sem otimização - 3,45 segundos
+Algorítmo otimizado - 0,06 segundos
+
+Número calculado: 25000
+Algorítmo sem otimização - 22,60 segundos
+Algorítmo otimizado - 0,17 segundos
+
+Número calculado: 50000
+Algorítmo sem otimização - 102,96 segundos
+Algorítmo otimizado - 0,51 segundos
+
+*Python - Tempo de exercução*
+Número calculado: 5000
+Algorítmo sem otimização - 0,04 segundos
+Algorítmo otimizado - 0,004 segundos
+
+Número calculado: 10000
+Algorítmo sem otimização - 0,16 segundos
+Algorítmo otimizado - 0,007 segundos
+
+Número calculado: 25000
+Algorítmo sem otimização - 0,95 segundos
+Algorítmo otimizado - 0,013 segundos
+
+Número calculado: 50000
+Algorítmo sem otimização - 3,82 segundos
+Algorítmo otimizado - 0,033 segundos
