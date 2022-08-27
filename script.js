@@ -43,7 +43,7 @@ function mostrarResultados(numero, resultado, tempoDecorrido) {
     document.getElementById("table-time").innerHTML = tempoFormatado + ' s';
 
     let texto = document.getElementById("texto-detalhes");
-    texto.innerHTML = `Existem <span>${resultadoFormatado}</span> número(s) menor(es) que <span>${numeroFormatado}</span> que possue(m) o mesmo número de divisores que seu respectivo inteiro consecutivo. O algorítmo processou esse resultado em <span>${tempoFormatado} segundo(s)</span>.`;
+    texto.innerHTML = `Existem <span>${resultadoFormatado}</span> números menores que <span>${numeroFormatado}</span> que possuem o mesmo número de divisores que seu respectivo inteiro consecutivo. O algorítmo processou esse resultado em <span>${tempoFormatado} segundo(s)</span>.`;
 }
 
 
