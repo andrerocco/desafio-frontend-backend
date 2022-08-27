@@ -2,6 +2,8 @@
 
 Esse projeto é a solução de André Amaral Rocco para o desafio de Desenvolvimento Web Full Stack proposta pelo [Laboratório Bridge](https://portal.bridge.ufsc.br). O desafio envolve a implementação de funcionalidades web tanto no frontend quantono backend.
 
+Acesse a página desse repositório em: https://andrerocco.github.io/desafio-frontend-backend/
+
 ### O desafio proposto:
 - Você deve criar uma Aplicação Web, que permita que o usuário insira um número inteiro k e calcule o número de inteiros positivos n menores que k, para os quais n e n + 1 têm o mesmo número de divisores positivos.
 - Considere que o valor de n deve ser maior que 1.
