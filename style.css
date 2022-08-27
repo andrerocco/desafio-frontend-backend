@@ -10,6 +10,10 @@ body {
     background: white;
     font-family: 'Rubik', sans-serif;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 .unselectable {
     user-select: none;
     -moz-user-select: none;
@@ -71,7 +75,6 @@ input[type=number] { -moz-appearance: textfield; }
     left: 50%;
     transform: translateX(-50%);
 }
-
 #resultado-container table {
     position: relative;
     left: 50%;
@@ -80,16 +83,13 @@ input[type=number] { -moz-appearance: textfield; }
     border-collapse: collapse;
     width: 340px;
 }
-
 th, td {
     color: rgb(48, 48, 48);
     padding: 12px;
 }
-  
 tr:nth-child(odd) { background-color: #f7f7f7; }
 td:nth-child(1) { text-align: left; }
 td:nth-child(2) { text-align: right; }
-
 
 #texto-detalhes {
     margin-bottom: 40px;
@@ -99,6 +99,14 @@ td:nth-child(2) { text-align: right; }
 }
 #texto-detalhes span {
     font-weight: 500;
+}
+
+/* Ícones no canto da tela */
+#icones {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 20%;
 }
 
 @media screen and (max-width: 943px) {
