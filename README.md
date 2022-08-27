@@ -128,36 +128,17 @@ print(resultado)
 
 Fazendo testes rapidos, é possível notar uma drástica diferença no tempo de exercução dos dois algorítmos.
 
-*JavaScript - Tempo de exercução*
-Número calculado: 5000
-Algorítmo sem otimização - 0,87 segundos
-Algorítmo otimizado - 0,02 segundos
 
-Número calculado: 10000
-Algorítmo sem otimização - 3,45 segundos
-Algorítmo otimizado - 0,06 segundos
+***JavaScript* - Tempo de exercução**
 
-Número calculado: 25000
-Algorítmo sem otimização - 22,60 segundos
-Algorítmo otimizado - 0,17 segundos
+Número calculado: 5000 | Algorítmo sem otimização - **0,87** segundos | Algorítmo otimizado - **0,02** segundos <br>
+Número calculado: 10000 | Algorítmo sem otimização - **3,45** segundos | Algorítmo otimizado - **0,06** segundos <br>
+Número calculado: 25000 | Algorítmo sem otimização - **22,60** segundos | Algorítmo otimizado - **0,17** segundos <br>
+Número calculado: 50000 | Algorítmo sem otimização - **102,96** segundos | Algorítmo otimizado - **0,51** segundos <br>
 
-Número calculado: 50000
-Algorítmo sem otimização - 102,96 segundos
-Algorítmo otimizado - 0,51 segundos
+***Python* - Tempo de exercução**
 
-*Python - Tempo de exercução*
-Número calculado: 5000
-Algorítmo sem otimização - 0,04 segundos
-Algorítmo otimizado - 0,004 segundos
-
-Número calculado: 10000
-Algorítmo sem otimização - 0,16 segundos
-Algorítmo otimizado - 0,007 segundos
-
-Número calculado: 25000
-Algorítmo sem otimização - 0,95 segundos
-Algorítmo otimizado - 0,013 segundos
-
-Número calculado: 50000
-Algorítmo sem otimização - 3,82 segundos
-Algorítmo otimizado - 0,033 segundos
+Número calculado: 5000 | Algorítmo sem otimização - **0,04** segundos | Algorítmo otimizado - **0,004** segundos <br>
+Número calculado: 10000 | Algorítmo sem otimização - **0,16** segundos | Algorítmo otimizado - **0,007** segundos <br>
+Número calculado: 25000 | Algorítmo sem otimização - **0,95** segundos | Algorítmo otimizado - **0,013** segundos <br>
+Número calculado: 50000 | Algorítmo sem otimização - **3,82** segundos | Algorítmo otimizado - **0,033** segundos <br>
