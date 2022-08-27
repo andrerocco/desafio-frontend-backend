@@ -19,24 +19,26 @@ function calcularResultado(number) {
         /* Se o número de divisores do valor atual de i for igual ao número de divisores do valor anterior de i,
         o valor de resultado será incrementado em 1 pois o número anterior é uma resposta correta */
         if (divisoresAtual == divisoresAnterior) {
-            resultado++
-        }
+            resultado++;
+        };
     
         // Ao fim da instância, o número de divisores do valor atual de i é passado para divisoresAnterior
-        divisoresAnterior = divisoresAtual
+        divisoresAnterior = divisoresAtual;
     }
+
+    return resultado // Retorna o resultado da operação
 }
 
-let number = 627;
+let form = document.getElementById("form");
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Previne que a página recarregue quando o usuário submeter sua resposta
 
-let inicio = performance.now(); // Armazena o instante de inicialização do loop para a solução do problema
+    let number = document.getElementById("number").value; // Recebe o número digitado pelo usuário
+    
+    let inicio = performance.now(); // Armazena o instante de inicialização do loop para a solução do problema
+    
+    calcularResultado(number);
 
-/* Algorítmo de solução */
-
-
-console.log(resultado)
-
-let fim = performance.now(); // Armazena o instante final em que o loop terminou de ser executado
-let tempoDecorrido = fim - inicio // Calcula o tempo para a solução
-
-console.log(tempoDecorrido)
+    let fim = performance.now(); // Armazena o instante final em que o loop terminou de ser executado
+    let tempoDecorrido = fim - inicio // Calcula o tempo para a solução
+})
