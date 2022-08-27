@@ -1,25 +1,29 @@
-let number = 16;
+let number = 627;
 
 let inicio = performance.now(); // Armazena o instante de inicialização do loop para a solução do problema
 
 /* Algorítmo de solução */
-let resultado = 0;
+let resultado = 0; 
 let divisoresAnterior = 0;
 for (let i = 1; i < number; i++) {
     let divisoresAtual = 0;
 
-    for (let k = i; k > 0; k--) {
+    let limit = parseInt(Math.sqrt(i));
+    for (let k = 1; k < limit+1; k++) {
         if (i % k == 0) { 
             divisoresAtual++;
+            if (k != i/k) {
+                divisoresAtual++;
+            }
         }
     };
 
     if (divisoresAtual == divisoresAnterior) {
-        resultado++;
-    };
+        resultado++
+    }
 
     divisoresAnterior = divisoresAtual
-};
+}
 
 console.log(resultado)
 
