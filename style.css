@@ -62,3 +62,23 @@ form input[type=submit] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 input[type=number] { -moz-appearance: textfield; }
+
+/* Display do resultado */
+#resultado-container {
+    position: absolute;
+    width: 30vw;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#estatisticas-grid {
+    display: grid; 
+    grid-template-columns: max-content 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 20px; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+      margin-bottom: 30px;
+}
