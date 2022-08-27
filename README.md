@@ -66,13 +66,15 @@ Entretando, é possível notar que esse algorítmo, apesar de simples, se torna 
 
 ### A solução otimizada
 
-É possível otimizar o algorítmo que contabiliza (descobre através da força bruta) a quantidade de números divisíveis do número *i* e, dessa forma, reduzir significantemente o tempo de execução. 
+É possível otimizar o algorítmo que contabiliza (descobrindo através da força bruta) a quantidade de números divisíveis do número *i* e, dessa forma, reduzir significantemente o tempo de execução do programa. 
+
 Veja como o algorítmo irá descobrir quantos divisores um *i* número tem:
 - Ao invés de percorrer todos os inteiros de 1 até *i*, o programa irá percorrer todos os inteiros de 1 até √*i*
 - Se um inteiro de 1 até √*i* divide *i*, então o programa irá conferir se *i* dividido por esse inteiro é diferente de *i*. Caso se confirme, então *i* dividido pelo inteiro em questão também divide *i*.
 
-Essa solução considera que os divisores de um número qualquer podem ser distribuídos em pares. Por exemplo, os divisores de 16 são 1, 2, 4, 8, 16. Os pares seram formados por números juntos aos seus divisores complementares seriam (1, 16), (2, 8) e (4, 4). Os pares que não tem números repetidos serão contados na mesma instância do for. Já o único par que contém o número repetido é a mediana da lista de divisores de um número quando o número aos quais divisores estão sendo conferidos é um quadrado perfeito.
-Note que essa explicação não é uma prova matemátima, mas sim uma exemplificação.
+Essa solução considera que os divisores de um número qualquer podem ser distribuídos em pares. Por exemplo, os divisores de 16 são 1, 2, 4, 8, 16. Os pares formados por números juntos aos seus divisores complementares seriam (1, 16), (2, 8) e (4, 4). Os pares que não tem números repetidos serão contados na mesma instância do *loop*. Já o único par que contém o número repetido (que é a mediana da lista de divisores de um número quando o número é um quadrado perfeito) será contado apenas uma vez.
+
+Note que essa explicação não é uma prova matemática, mas sim uma exemplificação.
 
 *JavaScript:*
 ```js
@@ -126,7 +128,7 @@ for i in range(1, number):
 print(resultado)
 ```
 
-Fazendo testes rapidos, é possível notar uma drástica diferença no tempo de exercução dos dois algorítmos.
+Fazendo alguns testes rapidos, é possível notar uma drástica diferença no tempo de execução dos dois algorítmos.
 
 
 ***JavaScript* - Tempo de exercução**
