@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
+
 <body>
-    <form id="form">
-        <p></p>
-        <input type="number" id="number" name="number" min="1" placeholder="Insira um número" required><br>
+    <form class="unselectable">
+        <label for="number-input">Insira um número</label><br>
+        <input type="number" id="number-input" name="number" min="1" autocomplete="off" required><br>
         <input type="submit" value="Calcular">
     </form>
 
