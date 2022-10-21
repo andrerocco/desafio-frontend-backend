@@ -64,11 +64,15 @@ form.addEventListener('submit', function(event) {
 
 /* Botão de explicação */
 let questionButton = document.getElementById("duvidas-button");
+let janelaDuvidas = document.getElementById("janela-duvidas");
 questionButton.addEventListener('click', function(event) {
-    let janelaDuvidas = document.getElementById("janela-duvidas");
     if (window.getComputedStyle(janelaDuvidas).visibility == 'hidden') { // Se o atributo visibility da janela está em hidden
         janelaDuvidas.style.visibility = 'visible';
     } else if (window.getComputedStyle(janelaDuvidas).visibility == 'visible') { // Se o atributo visibility da janela está em visible
         janelaDuvidas.style.visibility = 'hidden';
     }
 })
+let closeButton = document.getElementById("close-icon-wrapper");
+closeButton.addEventListener('click', function(event) {
+    janelaDuvidas.style.visibility = 'hidden';
+});
