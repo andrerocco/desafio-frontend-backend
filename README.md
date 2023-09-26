@@ -133,14 +133,14 @@ print(resultado)
 Fazendo alguns testes rapidos, é possível notar uma drástica diferença no tempo de execução dos dois algorítmos.
 
 
-***Python* - Tempo de exercução**
+***Python* - Tempo de execução**
 
 Número calculado: 5000 | Algorítmo sem otimização - **0,87** segundos | Algorítmo otimizado - **0,02** segundos <br>
 Número calculado: 10000 | Algorítmo sem otimização - **3,45** segundos | Algorítmo otimizado - **0,06** segundos <br>
 Número calculado: 25000 | Algorítmo sem otimização - **22,60** segundos | Algorítmo otimizado - **0,17** segundos <br>
 Número calculado: 50000 | Algorítmo sem otimização - **102,96** segundos | Algorítmo otimizado - **0,51** segundos <br>
 
-***JavaScript* - Tempo de exercução**
+***JavaScript* - Tempo de execução**
 
 Número calculado: 5000 | Algorítmo sem otimização - **0,04** segundos | Algorítmo otimizado - **0,004** segundos <br>
 Número calculado: 10000 | Algorítmo sem otimização - **0,16** segundos | Algorítmo otimizado - **0,007** segundos <br>
