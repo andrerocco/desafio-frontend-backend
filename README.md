@@ -1,6 +1,6 @@
 # Desafio Full Stack
 
-Esse projeto é a solução de André Amaral Rocco para o desafio de Desenvolvimento Web Full Stack proposta pelo [Laboratório Bridge](https://portal.bridge.ufsc.br). O desafio envolve a implementação de funcionalidades web tanto no frontend quantono backend.
+Esse projeto é a solução de André Amaral Rocco para o desafio de Desenvolvimento Web Full Stack proposta pelo [Laboratório Bridge](https://portal.bridge.ufsc.br).
 
 Acesse a página desse repositório em: https://andrerocco.github.io/desafio-fullstack-divisores/
 
